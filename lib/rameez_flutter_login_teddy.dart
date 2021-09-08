@@ -225,8 +225,8 @@ class __HeaderState extends State<_Header> {
   }
 }
 
-class FlutterLogin extends StatefulWidget {
-  FlutterLogin(
+class RameezAnimatedLogin extends StatefulWidget {
+  RameezAnimatedLogin(
       {Key? key,
       required this.onSignup,
       required this.onLogin,
@@ -280,7 +280,7 @@ class FlutterLogin extends StatefulWidget {
   /// descriptions
   final LoginMessages? messages;
 
-  /// FlutterLogin's theme. If not specified, it will use the default theme as
+  /// RameezAnimatedLogin's theme. If not specified, it will use the default theme as
   /// shown in the demo gifs and use the colorsheme in the closest `Theme`
   /// widget
   final LoginTheme? theme;
@@ -347,10 +347,10 @@ class FlutterLogin extends StatefulWidget {
   };
 
   @override
-  _FlutterLoginState createState() => _FlutterLoginState();
+  _RameezAnimatedLoginState createState() => _RameezAnimatedLoginState();
 }
 
-class _FlutterLoginState extends State<FlutterLogin>
+class _RameezAnimatedLoginState extends State<RameezAnimatedLogin>
     with TickerProviderStateMixin {
   final GlobalKey<AuthCardState> authCardKey = GlobalKey();
   static const loadingDuration = Duration(milliseconds: 400);
@@ -607,9 +607,9 @@ class _FlutterLoginState extends State<FlutterLogin>
     final cardTopPosition = deviceSize.height / 2 - cardInitialHeight / 2;
     final headerHeight = cardTopPosition - headerMargin;
     final userValidator =
-        widget.userValidator ?? FlutterLogin.defaultEmailValidator;
-    final passwordValidator =
-        widget.passwordValidator ?? FlutterLogin.defaultPasswordValidator;
+        widget.userValidator ?? RameezAnimatedLogin.defaultEmailValidator;
+    final passwordValidator = widget.passwordValidator ??
+        RameezAnimatedLogin.defaultPasswordValidator;
 
     Widget footerWidget = SizedBox();
     if (widget.footer != null) {
